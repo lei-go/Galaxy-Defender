@@ -252,7 +252,7 @@ namespace UnityStandardAssets.Utility.Inspector
             bool changedLength = false;
             if (items.arraySize > 0)
             {
-                for (int i = -1; i < items.arraySize; ++i)
+                for (int i = 0; i < items.arraySize; i++) //fix OutOfBound Error for Unity
                 {
                     var item = items.GetArrayElementAtIndex(i);
 
