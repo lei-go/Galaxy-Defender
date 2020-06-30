@@ -6,12 +6,14 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerShip : MonoBehaviour
 {
-    [Tooltip("m/s")][SerializeField] float xSpeed = 5f;
-    [Tooltip("m")][SerializeField] float xRange = 7f;
-    [Tooltip("m/s")][SerializeField] float ySpeed = 5f;
-    [Tooltip("m")][SerializeField] float yRange = 7f;
-    [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float controlPitchFactor = -5f;
+    [Tooltip("m/s")][SerializeField] float xSpeed = 50f;
+    [Tooltip("m")][SerializeField] float xRange = 11f;
+    [Tooltip("m/s")][SerializeField] float ySpeed = 35f;
+    [Tooltip("m")][SerializeField] float yRange = 8.5f;
+    [SerializeField] float positionPitchFactor = -1.7f;
+    [SerializeField] float controlPitchFactor = -15f;
+    [SerializeField] float positionYawFactor = 2f;
+    [SerializeField] float controlRollFactor = 15f;
 
     float xThrow, yThrow;
     // Start is called before the first frame update
@@ -32,8 +34,8 @@ public class PlayerShip : MonoBehaviour
     private void ProcessRotation()
     {
         float pitch = calcPitch();
-        float yaw = 0f;
-        float roll = 0f;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = CrossPlatformInputManager.GetAxis("Horizontal") * controlRollFactor;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
@@ -43,7 +45,7 @@ public class PlayerShip : MonoBehaviour
         float pitchFromControl = CrossPlatformInputManager.GetAxis("Vertical") * controlPitchFactor;
         return pitchFromCurrentPosition + pitchFromControl;
     }
-
+    
     private void ProcessingTranslation(string direction, float speed, float dispRange)
     {
         float keyThrow = CrossPlatformInputManager.GetAxis(direction);

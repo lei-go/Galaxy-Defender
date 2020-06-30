@@ -188,22 +188,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963194228}
     m_Modifications:
-    - target: {fileID: 749239244, guid: 05a58cde4926cd941aa6b2b9a98fa3a1, type: 3}
-      propertyPath: yRange
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 749239244, guid: 05a58cde4926cd941aa6b2b9a98fa3a1, type: 3}
-      propertyPath: pitchFactor
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 749239244, guid: 05a58cde4926cd941aa6b2b9a98fa3a1, type: 3}
-      propertyPath: controlPitchFactor
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 749239244, guid: 05a58cde4926cd941aa6b2b9a98fa3a1, type: 3}
-      propertyPath: positionPitchFactor
-      value: -1.7
-      objectReference: {fileID: 0}
     - target: {fileID: 3191996193529809740, guid: 05a58cde4926cd941aa6b2b9a98fa3a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -217,7 +201,7 @@ PrefabInstance:
     - target: {fileID: 3191996193529809740, guid: 05a58cde4926cd941aa6b2b9a98fa3a1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.9
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3191996193529809740, guid: 05a58cde4926cd941aa6b2b9a98fa3a1,
         type: 3}
@@ -446,7 +430,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 45
   orthographic: 0
   orthographic size: 10.184216
   m_Depth: -1
