@@ -5025,7 +5025,7 @@ PrefabInstance:
     - target: {fileID: 8397977538377069166, guid: 090e315cf12154548b93c63b496f7e17,
         type: 3}
       propertyPath: m_Name
-      value: Beam (1)
+      value: Gun Right
       objectReference: {fileID: 0}
     - target: {fileID: 8397977538377069167, guid: 090e315cf12154548b93c63b496f7e17,
         type: 3}
@@ -5115,7 +5115,7 @@ PrefabInstance:
     - target: {fileID: 8397977538377069166, guid: 090e315cf12154548b93c63b496f7e17,
         type: 3}
       propertyPath: m_Name
-      value: Beam
+      value: Gun Left
       objectReference: {fileID: 0}
     - target: {fileID: 8397977538377069167, guid: 090e315cf12154548b93c63b496f7e17,
         type: 3}

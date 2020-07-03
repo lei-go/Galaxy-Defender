@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("m")][SerializeField] float xRange = 14f;
     [Tooltip("m/s")][SerializeField] float ySpeed = 35f;
     [Tooltip("m")][SerializeField] float yRange = 8.5f;
+    [SerializeField] GameObject[] guns;
+
     [Header("Position And Throw")]
     [SerializeField] float positionPitchFactor = -1.7f;
     [SerializeField] float controlPitchFactor = -13f;
@@ -34,7 +36,36 @@ public class PlayerController : MonoBehaviour
             ProcessingTranslation("Horizontal", xSpeed, xRange);
             ProcessingTranslation("Vertical", ySpeed, yRange);
             ProcessRotation();
+            Firing();
         }        
+    }
+
+    private void Firing()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }    
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
     }
 
     private void ProcessRotation()
