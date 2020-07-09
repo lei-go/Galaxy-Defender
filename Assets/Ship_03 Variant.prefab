@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePerHit: 20
-  health: 2
+  health: 4
   deathFX: {fileID: 3476611609855611113, guid: 805f6a42c0b926a4ea183c1f9d5bf39d, type: 3}
   parent: {fileID: 0}
 --- !u!1001 &8159869994843951568
